@@ -1,0 +1,29 @@
+<div class="card p-3">
+  <p>(clicar celda para editar)</p>
+  <table class="table table-bordered table-responsive-md table-striped text-center">
+    <thead>
+      <tr>
+        <th class="text-center">Codigo</th>
+        <th class="text-center">Descripcion</th>
+        <th class="text-center">Precio</th>
+        <th class="text-center">Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of clientes ; track $index) {
+      <tr>
+        <td class="pt-3-half" contenteditable="true">{{item.codigo}}</td>
+        <td class="pt-3-half" contenteditable="true">{{item.descripcion}}</td>
+        <td class="pt-3-half" contenteditable="true">{{item.precio}}</td>
+        <td>
+          <span class="table-remove"
+            ><button (click)='remove(item.codigo)'type="button" class="btn btn-danger btn-rounded btn-sm my-0">
+              Borrar
+            </button></span
+          >
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>

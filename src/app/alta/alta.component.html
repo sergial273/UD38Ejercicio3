@@ -1,0 +1,20 @@
+<div class="container">
+  <form (submit)="sendDataToService()">
+    <div class="form-group">
+      <label for="nombre">Codigo</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="cliente.codigo" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="cif">Descripcion</label>
+      <input type="text" class="form-control" id="cif" name="cif" [(ngModel)]="cliente.descripcion" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="grupo">Precio</label>
+      <input type="text" class="form-control" id="cif" name="cif" [(ngModel)]="cliente.precio" required>
+    </div>
+  
+    <button type="submit" class="btn btn-primary mb-3 mt-3">Enviar</button>
+  </form>
+</div>
